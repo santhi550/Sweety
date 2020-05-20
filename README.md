@@ -2,7 +2,7 @@
 Sweety is voice assistant with limited features
 When you the call assistant as 'sweety' then only it will respond.
 
-The main features are
+The main features are timetable and website urls.
 # Timetable
 User is requested to add or update the 5 days (Mon-Fri) time table in which each day has fixed time table from 8 am to 5pm with one hour intervals.
 When you ask assistant  'what is the monday timetable?', Sweety will tell the timetable of monday in sequential order with timings.
