@@ -16,7 +16,7 @@ when user say 'open gaana' it will open the website in chrome.
 There will be a user authentication (used django auth models).
 So that any number of users can be registered and set up their time tables and most viewed website urls.
 
-# Extra
+# Extra Features
 There will be extra features.
 Like read mode and write mode.
 you have to say 'go to read mode',
