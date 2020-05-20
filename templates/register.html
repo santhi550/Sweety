@@ -1,0 +1,26 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+<form action="register" method="POST" style="width:500px;margin-left:35%">
+    {% csrf_token %}
+    <div class="container">
+      <h1>Register</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <center>
+        {% for message in messages %}
+             <h3 class="button glass clear-a" style="cursor: default;">{{message}}</h3>
+        {% endfor %}
+  </center>
+      <label for="username"><b>Username</b></label>
+      <br>
+      <input type="text" class="button glass clear-a" placeholder="Enter Username" name="username" style="width:100%"  required >
+      <label for="psw"><b>Password</b></label>
+      <br>
+      <input type="password" class="button glass clear-a" placeholder="Enter Password" name="pwd" style="width:100%" required>
+      <hr>
+      <button type="submit" class="button glass clear-a" style="width: 100%;">Register</button>
+    </div>
+  </form>
+  
+{% endblock %}

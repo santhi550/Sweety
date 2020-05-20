@@ -1,0 +1,60 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+        <table>
+            <tr>
+                <th>Day</th>
+                {% for time in alltimes %}
+                <th>{{time.timenum}}</th>
+                {% endfor %}
+            </tr>
+            {% for day in alldays %}
+                <tr>
+                     <form action="modify_timetable" target="iframe_a">
+                    <td><input type="text" value="{{day.name}}" name="day_name" class="button glass clear-a" style="cursor:default;width:135px" readonly/></td>
+                            
+                    {% for time  in alltimes %}
+                            <td>
+                                <select  style="font-size: 15px;width:135px;" class="button glass clear-a"  name="{{time.timeing}}" >
+                                {% for subject in allsubjects %}
+                                    <option  class="options"  value="{{subject.subject}}">{{subject.subject}}</option>
+                                {% endfor %}
+                                <option  class="options"  value="None">None</option>
+                                </select>
+                            </td>
+                        {% endfor %}
+                    
+                        <td>
+                    <button type="submit" style="font-size: 15px;width:135px;" class="button glass clear-a" >Update</button>
+                </td>    
+                </form>
+                </tr>
+            {% endfor %}   
+        </table>
+        <iframe name="iframe_a" style="width:100px;height:50px;border:none"></iframe>
+        <script>
+        var x=0
+        {% for timetableid in timetable_list %}
+
+        document.getElementsByTagName("SELECT")[x].value="{{timetableid.eight_to_nine}}";
+        x++;
+        document.getElementsByTagName("SELECT")[x].value="{{timetableid.nine_to_ten}}";
+        x++;
+        document.getElementsByTagName("SELECT")[x].value="{{timetableid.ten_to_eleven}}";
+        x++;
+        document.getElementsByTagName("SELECT")[x].value="{{timetableid.eleven_to_twelve}}";
+        x++;
+        document.getElementsByTagName("SELECT")[x].value="{{timetableid.twelve_to_one}}";
+        x++;
+        document.getElementsByTagName("SELECT")[x].value="{{timetableid.two_to_three}}";
+        x++;
+        document.getElementsByTagName("SELECT")[x].value="{{timetableid.three_to_four}}";
+        x++;
+        document.getElementsByTagName("SELECT")[x].value="{{timetableid.four_to_five}}";
+        x++;
+
+        {% endfor %}
+    
+        </script>
+{% endblock %}

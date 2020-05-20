@@ -1,0 +1,209 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sweety</title>
+    <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <style>
+            th{
+                text-align:center;
+            }
+            body{
+              background-image:url("{% static 'images/back1.jpg' %}");
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-position: center;
+              background-size: cover;
+              min-height: 100vh;
+              color:white;
+              overflow: hidden;
+            }
+        option.options{
+          font-size: 15px;
+          width:135px;
+          color:black;
+          background-color:rgba(0, 0, 0, 0.05);
+          cursor:pointer;
+        }    
+
+.button {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 1px #000;
+    font-size: 16px;
+    text-decoration:none;
+
+    padding: 0.5em 1.5em;
+    margin: 0.5em;
+
+    cursor: pointer;
+    width: 200px;
+    overflow: visible;
+
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  
+    outline: 0;
+}
+
+.glass {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYwNjc2OCIgc3RvcC1vcGFjaXR5PSIwLjMiLz4KICAgIDxzdG9wIG9mZnNldD0iMyUiIHN0b3AtY29sb3I9IiNiYmJiYmIiIHN0b3Atb3BhY2l0eT0iMC4zIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI3JSIgc3RvcC1jb2xvcj0iI2JiYmJiYiIgc3RvcC1vcGFjaXR5PSIwLjMiLz4KICAgIDxzdG9wIG9mZnNldD0iMjglIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMyIvPgogICAgPHN0b3Agb2Zmc2V0PSI3MyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4zIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg4JSIgc3RvcC1jb2xvcj0iIzRiNTA1MSIgc3RvcC1vcGFjaXR5PSIwLjMiLz4KICAgIDxzdG9wIG9mZnNldD0iOTclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMyIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMyIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,
+      rgba(96,103,104,0.3) 0%,
+      rgba(187,187,187,0.3) 3%,
+      rgba(187,187,187,0.3) 27%,
+      rgba(0,0,0,0.3) 28%,
+      rgba(0,0,0,0.3) 60%,
+      rgba(0,0,0,0.3) 73%,
+      rgba(75,80,81,0.3) 88%,
+      rgba(0,0,0,0.3) 97%,
+      rgba(0,0,0,0.3) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom,
+      color-stop(0%,rgba(96,103,104,0.3)),
+      color-stop(3%,rgba(187,187,187,0.3)),
+      color-stop(27%,rgba(187,187,187,0.3)),
+      color-stop(28%,rgba(0,0,0,0.3)),
+      color-stop(60%,rgba(0,0,0,0.3)),
+      color-stop(73%,rgba(0,0,0,0.3)),
+      color-stop(88%,rgba(75,80,81,0.3)),
+      color-stop(97%,rgba(0,0,0,0.3)),
+      color-stop(100%,rgba(0,0,0,0.3))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(96,103,104,0.3) 0%,rgba(187,187,187,0.3) 3%,rgba(187,187,187,0.3) 27%,rgba(0,0,0,0.3) 28%,rgba(0,0,0,0.3) 60%,rgba(0,0,0,0.3) 73%,rgba(75,80,81,0.3) 88%,rgba(0,0,0,0.3) 97%,rgba(0,0,0,0.3) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(96,103,104,0.3) 0%,rgba(187,187,187,0.3) 3%,rgba(187,187,187,0.3) 27%,rgba(0,0,0,0.3) 28%,rgba(0,0,0,0.3) 60%,rgba(0,0,0,0.3) 73%,rgba(75,80,81,0.3) 88%,rgba(0,0,0,0.3) 97%,rgba(0,0,0,0.3) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(96,103,104,0.3) 0%,rgba(187,187,187,0.3) 3%,rgba(187,187,187,0.3) 27%,rgba(0,0,0,0.3) 28%,rgba(0,0,0,0.3) 60%,rgba(0,0,0,0.3) 73%,rgba(75,80,81,0.3) 88%,rgba(0,0,0,0.3) 97%,rgba(0,0,0,0.3) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(96,103,104,0.3) 0%,rgba(187,187,187,0.3) 3%,rgba(187,187,187,0.3) 27%,rgba(0,0,0,0.3) 28%,rgba(0,0,0,0.3) 60%,rgba(0,0,0,0.3) 73%,rgba(75,80,81,0.3) 88%,rgba(0,0,0,0.3) 97%,rgba(0,0,0,0.3) 100%); /* W3C */
+
+    border-color: rgba(0, 0, 0, 0.6);
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+  
+    box-shadow:
+      0 1px 0 0 rgba(255, 255, 255, 0.4) inset,
+      0 2px 6px rgba(0, 0, 0, 0.5),
+      0 10px rgba(0, 0, 0, 0.05) inset;
+}
+
+a:hover {
+  color:white;
+  text-decoration: none;
+}
+
+button:active {
+    margin-left: 2px;
+    margin-right: -2px;
+}
+button:active.clear-a {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important; 
+}
+
+button:hover.clear-a {
+    color: rgba(255, 255, 255, 0.99);
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.99), 0px 0px 4px rgba(255, 255, 255, 0.75);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow:
+      0 1px 0 0 rgba(255, 255, 255, 0.4) inset,
+      0 2px 6px rgba(0, 0, 0, 0.5),
+      0 10px rgba(0, 0, 0, 0.05) inset,
+      0 0 5px 2px rgba(255, 255, 255, 0.75),
+      0 0 10px 2px rgba(255, 255, 255, 0.75) inset;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color :transparent;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background:transparent;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  outline: none;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+        </style>
+  </head>
+  <body>
+    {% block content %}
+    <div style="display:none">
+<audio  controls autoplay>
+  <source src="{% static 'audio/service.mp3' %}" type="audio/ogg">
+</audio>
+</div>
+
+{% if user.is_authenticated  %}
+    <div id="form_display">
+      
+    <form  action="sweety"  onsubmit="fun()">
+      <input type="hidden" name="user" value="{{user}}">
+      <center>
+      <button type="submit"  class="button glass clear-a" type="button"  style="width:300px;height:80px;font-size:25px;margin-top:20%">Sweety</button>
+    </center>
+    </form>
+    <div style="margin-left:550px;padding-top:150px;">
+        <a href="{% url 'alarmapp:timetables' %}" class="button glass clear-a" style="width:200px;height:">Timetable</a>
+      <a href="{% url 'alarmapp:subject' %}" class="button glass clear-a">Subjects</a>
+      <a href="{% url 'alarmapp:show_urls' %}" class="button glass clear-a">Urls</a>
+      <a href="{% url 'alarmapp:logout' %}" class="button glass clear-a" >Logout</a>
+
+      </div>
+  </div>
+  {% else %}
+  <h1 style="margin-top:50px;margin-left:20%">Dear Guest, Please register and login to meet Sweety</h1>
+  <div style="padding-left:35%;padding-top:200px;">
+  <a href="{% url 'alarmapp:login' %}"  ><button class="button glass clear-a">Login</button></a>
+  <a href="{% url 'alarmapp:register' %}"><button class="button glass clear-a">Register</button></a>
+  </div>
+  {% endif %}
+  <div id="mic_display" style="display:none">
+    <center>
+    <button style="width:500px;cursor:default" class="button glass clear-a">Speak with Sweety</button>
+</center>
+    <center>
+    <img src={% static 'images/mic.gif' %} style="width:200px;height:300px;" >
+  </center>
+  <center>
+  <button type="button" style="width:300px;cursor:default" class="button glass clear-a">Say Goodnight to Sweety to exit</button>
+</center>
+  </div>
+  <script>
+  var x = document.getElementById("myAudio")
+  x.autoplay = true;
+  function fun(){
+    document.getElementById('form_display').style.display='none';
+    document.getElementById('mic_display').style.display='block';
+  }
+  </script>
+  {% endblock %}
+  </body>
+</html>

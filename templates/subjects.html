@@ -1,0 +1,34 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+        {% for subject in allsubjects %}
+            <button style="cursor: default;" class="button glass clear-a">{{subject.subject}}</button>
+        {% endfor %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br><br><br>
+        
+        <button class="button glass clear-a" onclick="document.getElementById('form_display').style.display='block';document.getElementById('delete_form_display').style.display='none'" >Add Subject</button>
+        <button class="button glass clear-a" onclick="document.getElementById('delete_form_display').style.display='block';document.getElementById('form_display').style.display='none'" >Delete Subject</button>
+        
+        <div id="form_display" style="display:none">
+            <form action="add_subject">
+        <input class="button glass clear-a" placeholder="Enter New Subject" id="subject_name" type="text" name="subject_name" required/>
+        <input class="button glass clear-a" type="submit" value="Add" >
+    </form>
+    </div>
+    <div id="delete_form_display" style="display:none">
+            <form action="delete_subject">
+            <select class="button glass clear-a"  name="subject_name" >
+            {% for subject in allsubjects %}
+                <option  class="options"  value="{{subject.subject}}">{{subject.subject}}</option>
+            {% endfor %}
+            </select>
+        <input  class="button glass clear-a" type="submit" value="Delete" >
+</form>
+    </div>
+ 
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+<table>
+    <tr><th>
+        Command
+    </th>
+<th>Url</th>
+</tr>
+    {% for weblinkid in weblink_list %}
+    <tr>
+        <td>
+            <button style="cursor: default;" class="button glass clear-a">{{weblinkid.cmd}}</button>
+        </td>
+        <td>
+            <button style="cursor: default;width:100%" class="button glass clear-a" >{{weblinkid.url}}</button>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<button class="button glass clear-a" onclick="document.getElementById('form_display').style.display='block';document.getElementById('delete_form_display').style.display='none'" >Add Command and url</button>
+<button class="button glass clear-a" onclick="document.getElementById('delete_form_display').style.display='block';document.getElementById('form_display').style.display='none'" >Delete Command and Url</button>
+
+<div id="form_display" style="display:none">
+        <form action="add_url">
+    <input class="button glass clear-a" placeholder="Enter New cmd" id="cmd_name" type="text" name="new_cmd" required/>
+    <input class="button glass clear-a" placeholder="Enter New Url" id="url_name" type="text" name="new_url" required/>
+    <input class="button glass clear-a" type="submit" value="Add" >
+</form>
+</div>
+<div id="delete_form_display" style="display:none">
+        <form action="delete_url">
+        <select class="button glass clear-a"  name="cmd_name" >
+        {% for weblinkid in weblink_list %}
+            <option  class="options"  value="{{weblinkid.cmd}}">{{weblinkid.cmd}}</option>
+        {% endfor %}
+        </select>
+    <input  class="button glass clear-a" type="submit" value="Delete" >
+</form>
+</div>
+{% endblock %}
