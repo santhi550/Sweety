@@ -10,7 +10,7 @@ When you ask assistant  'what is the monday timetable?', Sweety will tell the ti
 User requested to give command with corresponding website url
 here command is a nick name to website that user can give.
 Suppose 
-command is 'gaana' and url is 'https://gaana.com'
+command is 'gaana' and url is https://gaana.com
 when user say 'open gaana' it will open the website in chrome.
 
 There will be a user authentication (used django auth models).
