@@ -17,7 +17,7 @@ There will be a user authentication (used django auth models).
 So that any number of users can be registered and set up their time tables and most viewed website urls.
 
 # Extra Features
-There will be extra features.
+There will be two extra features.
 Like read mode and write mode.
 you have to say 'go to read mode',
 it will take you to the read mode.
