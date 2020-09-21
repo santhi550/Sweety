@@ -38,9 +38,9 @@ def createaudio(p):
 def home(request):
     if request.session.has_key('user'):
         username = request.session['user']
-        return render(request, 'home.html', {"username" : username})
+        return render(request, 'index.html', {"username" : username})
     else:
-        return render(request, 'home.html')
+        return render(request, 'index.html')
 
 def sweety(request):
     if request.session.has_key('user'):
